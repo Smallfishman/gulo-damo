@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Smallfishman/gulo-damo/issues"
   },
-  "homepage": "https://github.com/Smallfishman/gulo-damo#readme"
+  "homepage": "https://github.com/Smallfishman/gulo-damo#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
