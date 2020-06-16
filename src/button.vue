@@ -4,7 +4,7 @@
 <script>
     export default {}
 </script>
-<style >
+<style lang= "scss" >
     .g-button {
         font-size: var(--font-size);
         height: var(--button-height);
@@ -12,16 +12,16 @@
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color);
         background: var(--button-bg);
-
-    }
-       .g-button:active {
+      &:active {
             background-color: var(--button-actiove-bg);
         }
 
-        .g-button:focus {
+      &:focus {
             outline: none;
         }
-        .g-button:hover {
+      &:hover {
             border-color: var(--border-color-hover);
         }
+    }
+
 </style>
