@@ -5,16 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>轱辘</title>
+    <style>
+        /*清除页面原有style*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 设置变量 */
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-actiove-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+
+        #app {
+            margin: 20px;
+        }
+
+        body {
+            font-size: var(--font-size)
+        }
+    </style>
+    <style>
+        .g-button {
+            font-size: var(--font-size);
+            height: var(--button-height);
+            padding: 0 1em;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            background: var(--button-bg);
+        }
+        .g-button:hover{
+            border-color: var(--border-color-hover);
+        }
+        .g-button:active{
+            background-color: var(--button-actiove-bg);
+        }
+        .g-button:focus {
+            outline: none;
+        }
+    </style>
 </head>
-    <div id="app">{{message}}</div>
+<div id="app">
+    <g-button></g-button>
+</div>
+
 <body>
     <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script src="./button.js"></script>
     <script>
         new Vue({
             el: '#app',
-            data: {
-                message: 'hello world'
-            }
         })
     </script>
 </body>
