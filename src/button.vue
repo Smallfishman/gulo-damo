@@ -1,6 +1,7 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-        <g-icon v-if="icon" :name="icon"></g-icon>
+        <g-icon class= "icon loading" v-if="icon" name = "jiazai" ></g-icon>
+        <g-icon class= "icon" v-if="icon" :name="icon"></g-icon>
             <div class="content">
                 <slot></slot>
             </div>
@@ -21,6 +22,10 @@
     }
 </script>
 <style lang="scss">
+    @keyframes spin {
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(360deg);}
+    }
     .g-button {
         font-size: var(--font-size);
         height: var(--button-height);
@@ -41,5 +46,11 @@
             > .content {order: 1;}
             > .icon {order: 2; margin-right: 0; margin-left: .3em;}
         }
+        .loading {
+            animation: spin 1.5s infinite linear; //转1秒、循环、线性
+        }
+    }
+    .jiazai {
+        background: red($color: #000000)
     }
       </style>
